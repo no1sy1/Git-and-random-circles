@@ -3,12 +3,13 @@ from PyQt5.QtGui import QPainter, QPixmap, QPen, QColor
 from PyQt5.QtCore import Qt
 from PyQt5 import uic
 from random import randint
+from ui import Ui_MainWindow
 
 
 class Test(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
 
         self.pushButton.setFixedSize(100, 100)
         self.pushButton.clicked.connect(self.circle)
